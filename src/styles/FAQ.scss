@@ -6,24 +6,25 @@
 }
 .faq-list{
   li{
-    padding: 10px;
+    margin: 5px;
   }
   button{
-    font-size: $font-size-large;
+    font-size: $font-size-medium;
     color: $text-color;
     background-color: $bg-color;
     border: none;
     outline: none;
     margin-bottom: 20px;
-    display: flex;  
-    align-items: center;
+    display: block;
+    text-align: left;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 20px 10px;
     &:hover{
-      background-color: #333;
+      background-color: #555;
     }
   }
   p{
     font-size: $font-size-medium;
+    padding: 10px;
   }
 }
