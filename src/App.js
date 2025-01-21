@@ -1,10 +1,14 @@
 import './App.scss';
+import Banner from './components/Banner';
+import FAQ from './components/FAQ';
+import Header from './components/Header';
 
 const App = () => {
   return (
-    <div>
-      <h1>Netflix Clone Site</h1>
-      <p>aaa</p>
+    <div className='app'>
+      <Header/>
+      <Banner/>
+      <FAQ/>
     </div>
   );
 };
