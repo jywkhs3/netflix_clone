@@ -1,3 +1,4 @@
+import Membership from "./Membership";
 
 const Header = () => {
   return (
@@ -17,11 +18,7 @@ const Header = () => {
       <div className="header-contents">
         <h2>Unlimited movies,<br/>TV shows, and more</h2>
         <h4>Start at KRW 5,500. Cancel anytime.</h4>
-        <p>Ready to watch? Enter your email to create or restart your membership.</p>
-        <div className='email-box'>
-          <input type='email'></input>
-          <button>Get Started 〉</button>
-        </div>
+        <Membership/>
       </div>
     </header>
   );

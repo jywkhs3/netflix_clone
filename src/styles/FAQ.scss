@@ -1,6 +1,7 @@
 .faq{
   @include component-size;
   h2{
+    font-size: $font-size-large;
     margin-bottom: 20px;
   }
 }
@@ -9,16 +10,22 @@
     margin: 5px;
   }
   button{
+    position: relative;
     font-size: $font-size-medium;
     color: $text-color;
-    background-color: $bg-color;
+    background-color: rgba(0,0,0,0);
     border: none;
     outline: none;
     margin-bottom: 20px;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: left;
     width: 100%;
+    height: 80px;
     padding: 20px 10px;
+    transition: 0.2s;
+    cursor: pointer;
     &:hover{
       background-color: #555;
     }
@@ -26,5 +33,13 @@
   p{
     font-size: $font-size-medium;
     padding: 10px;
+    height: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  p.open{
+    height: 150px;
+    padding: 10px 0;
+    opacity: 1;
   }
 }

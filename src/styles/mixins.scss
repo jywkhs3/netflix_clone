@@ -2,14 +2,30 @@
   color: $text-color;
   background-color: $primary-color;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
+  transition: 0.5s;
   &:hover{
     // background-color: $hover-color;
-    filter: brightness(0.5);
+    filter: brightness(0.8);
   }
 }
+@mixin select-style{
+    padding: 0.5rem 1.5rem;
+    margin-right: 10px;
+    background-color: transparent;
+    color: $text-color;
+    border-radius: 5px;
+    font-size: 15px;
+    &:hover{
+      outline: 2px solid #fff;
+    }
+    option{
+      background-color: #fff;
+      color: #000;
+    }
+  } 
 @mixin component-size{
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 

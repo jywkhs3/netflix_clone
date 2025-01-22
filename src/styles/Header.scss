@@ -21,14 +21,7 @@ nav{
   }
   div{
     select{
-      padding: 0.5rem 2rem;
-      margin-right: 10px;
-      background-color: transparent;
-      color: $text-color;
-      option{
-        background-color: #fff;
-        color: #000;
-      }
+      @include select-style;
     }
     button{
       @include button-style;
@@ -56,21 +49,3 @@ nav{
     font-size: $font-size-small;
   }
 }
-.email-box{
-  margin-top: 20px;
-  input{
-    font-size: $font-size-medium;
-    padding: 1rem 5rem;
-    margin-right: 10px;
-    background-color: $bg-color;
-    border: 0.2px solid #858585;
-    border-radius: 5px;
-    @include responsive($breakpoint-small){
-      width: 100%;
-    }
-  }
-  button{
-    @include button-style;
-    font-size: $font-size-medium;
-    }
-  }
