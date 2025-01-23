@@ -2,27 +2,21 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
+const movies = [
+  {id:1,title:'no.1',image:'./images/movie1.jpeg',tag:'latest registered'},
+  {id:2,title:'no.2',image:'./images/movie2.jpeg',tag:'latest registered'},
+  {id:3,title:'no.3',image:'./images/movie3.jpeg',tag:'latest registered'},
+  {id:4,title:'no.4',image:'./images/movie4.jpeg',tag:'latest registered'},
+  {id:5,title:'no.5',image:'./images/movie5.jpeg',tag:'latest registered'},
+  {id:6,title:'no.6',image:'./images/movie6.jpeg',tag:'latest registered'},
+  {id:7,title:'no.7',image:'./images/movie7.jpeg',tag:'latest registered'},
+  {id:8,title:'no.8',image:'./images/movie8.jpeg',tag:'latest registered'},
+  {id:9,title:'no.9',image:'./images/movie9.jpeg',tag:'latest registered'},
+  {id:10,title:'no.10',image:'./images/movie10.jpeg',tag:'latest registered'}
+];
 
 const MoveSlider = () => {
-  const [movies,setMovies] = useState([]);
-  const [error,setError] = useState(null);
-  const fetchMovies = async()=>{
-    const API_KEY='decc67e8f617c228c9c976bb05cd39ca';
-    const url =`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=ko-KR&page=1`;
-    try{
-      const response = await axios.get(url);
-      setMovies(response.data.results.slice(0,10));
-      // console.log(response);
-    } catch(error){
-      setError('An error occurred while fetching movie data.');
-    }
-  }
-  useEffect(()=>{
-    fetchMovies();
-  },[]);
   const settings = {
     dots: false,
     infinite: false,
@@ -34,17 +28,21 @@ const MoveSlider = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 960,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4
+          slidesToShow: 3
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
         }
       }
     ]
@@ -70,16 +68,21 @@ const MoveSlider = () => {
   }
   return (
     <div className="move-slider">
-      {
-        console.log(movies)
-      }
       <h2>Trending Now</h2>
+      <select>
+        <option>South Korea</option>
+        <option>Global</option>
+      </select>
+      <select>
+        <option>Movies</option>
+        <option>TV shows</option>
+      </select>
       <Slider {...settings}>
         {
           movies.map((list,idx)=>{
             return <div className='movie-card' key={idx}>
-              <img src={`https://image.tmdb.org/t/p/w342${list.poster_path}`} alt={list.title}></img>
-              <p>{idx+1}</p>
+              <img src={list.image} alt={list.title}></img>
+              <p>{list.id}</p>
             </div>
           })
         }

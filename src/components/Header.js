@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import Membership from "./Membership";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header>
       <nav>
-        <a>
+        <a href="#">
           <img src='./images/Netflix_Logo.png' alt='logo'></img>
         </a>
         <div>
@@ -12,7 +14,10 @@ const Header = () => {
             <option>English</option>
             <option>한국어</option>
           </select>
-          <button>Sign-In</button>
+          <button onClick={()=>{
+            //로그인 페이지로 이동 : useNavigate hook 활용
+            navigate('/login');
+          }}>Sign-In</button>
         </div>
       </nav>
       <div className="header-contents">

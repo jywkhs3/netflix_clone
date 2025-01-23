@@ -6,16 +6,17 @@ const Membership = () => {
   return (
     <div className="membership">
       <p>Ready to watch? Enter your email to create or restart your membership.</p>
-      <div className={`email-box ${isFocused === true ? 'focused':''}`}>
-        <label>Email address</label>
-        <input
-          className={`${isFocused === true ? 'focused':''}`}
-          type='email'
-          onFocus={()=>{setIsFocused(true);}}
-          onBlur={(e)=>{
-            if(e.target.value === '') setIsFocused(false);
-          }}
-        />
+      <div className='email-box'>
+        <label className={isFocused ? 'focused':''}>
+          <span>Email address</span>
+          <input
+            className={`${isFocused === true ? 'focused':''}`}
+            type='email'
+            onFocus={()=>{setIsFocused(true);}}
+            onBlur={(e)=>{
+              if(e.target.value === '') setIsFocused(false);
+            }}/>
+        </label>
         <button>Get Started<span><VscChevronRight /></span></button>
       </div>
     </div>

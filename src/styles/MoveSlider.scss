@@ -42,30 +42,26 @@
       width: 100%;
     }
   }
-  @include responsive($breakpoint-large) {
-    padding: 15px;
-  }
-  @include responsive($breakpoint-medium) {
-    padding: 10px;
-  }
-  @include responsive($breakpoint-small) {
-    padding: 5px;
-  }
+
 }
 .movie-card{
   position: relative;
   margin-bottom: 20px;
-  padding: 2rem 3rem;
+  // padding: 2rem 3rem;
   transition: 0.5s;
   &:hover{
     transform: scale(1.2);
   }
   img{
-    // width: 100%;
+    width: 90%;
+    margin: 50px auto;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
     cursor: pointer;
+    @include responsive($breakpoint-medium) {
+      height: 200px;
+    }
   }
   p{
     position: absolute;
@@ -79,5 +75,10 @@
     //               2px -2px 0 #fff, //오른쪽 위
     //               -2px 2px 0 #fff, //왼쪽 아래
     //               2px 2px 0 #fff; //오른쪽 아래
+    @include responsive($breakpoint-small){
+      position: absolute;
+      left: 20%;
+    }
   }
+
 }

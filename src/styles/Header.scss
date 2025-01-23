@@ -40,6 +40,9 @@ nav{
     @include responsive($breakpoint-medium){
       font-size: 40px;
     }
+    @include responsive($breakpoint-small){
+      font-size: 30px;
+    }
   }
   h4{
     font-size: $font-size-medium;
@@ -48,4 +51,5 @@ nav{
   p{
     font-size: $font-size-small;
   }
+
 }

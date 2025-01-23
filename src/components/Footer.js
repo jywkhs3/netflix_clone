@@ -11,9 +11,9 @@ const fmenus = [
   {id:10, title:'Cookie Preferences',url:'#'},
   {id:11, title:'Corporate Information',url:'#'},
   {id:12, title:'Contact Us',url:'#'},
-  {id:12, title:'Speed Test',url:'#'},
-  {id:12, title:'Legal Notices',url:'#'},
-  {id:12, title:'Only on Netflix',url:'#'}
+  {id:13, title:'Speed Test',url:'#'},
+  {id:14, title:'Legal Notices',url:'#'},
+  {id:15, title:'Only on Netflix',url:'#'}
 ]
 const Footer = () => {
   return (

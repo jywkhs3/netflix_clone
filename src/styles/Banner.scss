@@ -3,17 +3,18 @@
   display: flex;
   gap: 30px;
   padding: 20px;
+  margin-bottom: 20px;
   transition: 0.7s;
   cursor: pointer;
   &:hover{
     transform: scale(1.1);
     filter: brightness(1.4);
   }
-  @include responsive(959px){
-    
-  }
   .popcorn{ 
     font-size: 50px;
+    @include responsive($breakpoint-small){
+      display: block;
+    }
   }
 }
 .banner-text{
@@ -33,5 +34,16 @@
     @include button-style;
     background-color: #3e3c53;
     margin-left: auto;
+    @include responsive($breakpoint-small){
+      
+    }
+  }
+  @include responsive($breakpoint-medium){
+    height: 100px;
+  }
+
+  @include responsive($breakpoint-small){
+    width: 100%;
+    height: 200px;
   }
 }

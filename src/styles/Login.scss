@@ -1,0 +1,153 @@
+.login{
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+                    url('../../public/images/bg.jpg');
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-popup{
+  width: 450px;
+  height: 90%;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: $bg-color;
+  position: relative;
+  *{
+    margin: 15px 0;
+    font-size: 15px;
+    color: #fff;
+    a{
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  label, input, span, button{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+  }  
+  h2{
+    font-size: $font-size-large;
+    margin-bottom: 30px;
+  }
+  .close{
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 30px;
+        color: #555;
+        &:hover{
+          color: #fff;
+        }
+    }
+  button:nth-of-type(1){
+    @include button-style;
+  }
+  button:nth-of-type(2){
+    @include button-style;
+    background-color: #888;
+  }
+  form{
+    label{
+      position: relative;
+      &.focused{
+        span{
+          top: 25%;
+          font-size: 12px;
+          transition: 0.2s;
+        }
+      }
+      &.error{
+        input{
+          border: 2px solid $primary-color;
+          &.focused{
+            border: 1px solid #fff;
+          }
+        } 
+      }
+      span{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform:  translateY(-50%);
+        margin: 0;
+        color: #cecece;
+        font-size: 15px;
+      }
+      input{
+        position: relative;
+        background-color: transparent;
+        border: 1px solid #777;
+        padding: 20px;
+        &.focused{
+          // box-shadow: 0 0 2px #fff; //inset : 안쪽처리
+          box-shadow: -2px -2px 0 #fff, //왼쪽위
+                      2px -2px 0 #fff, //오른쪽 위
+                      -2px 2px 0 #fff, //왼쪽 아래
+                      2px 2px 0 #fff; //오른쪽 아래
+        }
+    }
+    button{
+      font-weight: bolder;
+      font-size: 18px;
+      }
+    }
+    p{
+      text-align: center;
+    }
+    .email-errortxt{
+      color: $primary-color;
+      font-size: $font-size-small;
+    }
+    .pw-errortxt{
+      color: $primary-color;
+      font-size: $font-size-small;
+    }
+  }
+  .login-footer{
+    input[type=checkbox]{
+      display: inline-block;
+      width: 20px;
+      margin: 0;
+      transform: scale(1.5);
+      border: 1px solid #777;
+      background: transparent;
+      cursor: pointer;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    span{
+      display: inline-block;
+      width: auto;
+      margin-left: 10px;
+    }
+    p{
+      color: #adadad;
+    }
+    p:last-of-type{
+      font-size: 13px;
+      a{
+        font-size: 13px;
+        color: blue;
+      }
+    }
+
+  }
+}
+.forgot-pw{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $text-color;
+}
+
+
+
+
