@@ -11,7 +11,7 @@ const MoveSlider = () => {
   const [error,setError] = useState(null);
   const [isLoading,setIsLoading] = useState(true);
   const fetchMovies = async()=>{
-    const API_KEY='decc67e8f617c228c9c976bb05cd39ca';
+    const API_KEY='dbd6c51dd16a3e44e4931c9edeca6098';
     const url =`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=ko-KR&page=1`;
     try{
       const response = await axios.get(url);
