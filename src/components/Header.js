@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Membership from "./Membership";
+// import netflix from './images/Netflix_Logo.png';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -7,10 +8,11 @@ const Header = () => {
     <header>
       <nav>
         <a href="#">
-          <img src='./images/Netflix_Logo.png' alt='logo'/>
+        <img src={`${process.env.PUBLIC_URL}/images/Netflix_Logo_PMS.png`} alt="logo" />
         </a>
         <div>
           <select>
+
             <option>English</option>
             <option>한국어</option>
           </select>
