@@ -3,17 +3,24 @@
   text-align: center;
 }
 .email-box{
-  // width: 200px;
   display: flex;
   justify-content: center;
   margin: 20px auto;
   gap: 10px;
+  @include responsive($breakpoint-small){
+    position: relative;
+    height: 100px;
+  }
   label{
     position: relative;
     &.focused{
       span{
         top: 25%;
         font-size: 12px;
+      }
+      @include responsive($breakpoint-small){
+        position: absolute;
+        top: 0;
       }
     }
     span{
@@ -23,6 +30,10 @@
       left: 1rem;
       color: #aaa;
       transition: 0.2s;
+      @include responsive($breakpoint-small){
+        position: absolute;
+        top: 20px;
+      }
     }
     input{
       font-size: $font-size-medium;
@@ -40,12 +51,23 @@
   }
   button{
     @include button-style;
-    // width: 300px;
+    width: 300px;
     padding: 0 4rem;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include responsive ($breakpoint-small){
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    @media (max-width:375px){
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem;
+    }
     }
   }

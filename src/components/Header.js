@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <nav>
         <a href="#">
-          <img src='./images/Netflix_Logo.png' alt='logo'></img>
+          <img src='./images/Netflix_Logo.png' alt='logo'/>
         </a>
         <div>
           <select>
