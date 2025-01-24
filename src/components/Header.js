@@ -10,9 +10,8 @@ const Header = () => {
         <a href="#">
         <img src={`${process.env.PUBLIC_URL}/images/Netflix_Logo_PMS.png`} alt="logo" />
         </a>
-        <div>
+        <div className="select">
           <select>
-
             <option>English</option>
             <option>한국어</option>
           </select>
