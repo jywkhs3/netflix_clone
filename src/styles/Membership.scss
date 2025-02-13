@@ -67,7 +67,7 @@
     @include responsive ($breakpoint-small){
       position: absolute;
       bottom: 0;
-      
+      padding: 1rem;
     }
   }
 }
